@@ -15,6 +15,9 @@ const newCity = "Berlin";
 euroCities[0] = newCity;
 console.log(euroCities);
 
+
+//Could have just done euroCities[0] = "Berlin";
+
 // 3. Print the length of the array "euroCities".
 
 console.log(euroCities.length);
@@ -24,6 +27,8 @@ console.log(euroCities.length);
 const RemovedLastItem = euroCities.pop();
 console.log(RemovedLastItem);
 console.log(euroCities);
+
+//Could have just done euroCities.pop() as we don't need to store the popped of element
 
 // 5. Use an array method to add "Budapest" to the euroCities array. 
 
@@ -36,7 +41,9 @@ const SecondAndThirdItemsRemoved = euroCities.splice(1, 2);
 console.log(SecondAndThirdItemsRemoved);
 console.log(euroCities);
 
-// 7. Create another variable named asianCities and assign an array of at least 5 cities to the variable.
+//Could have just done euroCities.splice(1,2). Don't need to be storing all these other values stored anywhere.
+
+// 7. Create another variable named asianCitie's and assign an array of at least 5 cities to the variable.
 
 const asianCities = ["Seoul", "Tokyo", "Beijing", "Hong Kong", "Taipei"];
 console.log(asianCities);
@@ -64,12 +71,14 @@ console.log(worldCities);
 worldCities.splice(-5, 1, "Toronto");
 console.log(worldCities);
 
+// worldCities[2] = "Toronto" also works!!!!
 
 // 12. **Bonus**: Remove no elements from the array of worldCities, but insert "Washington" at the 2nd position.
 
 worldCities.splice(-6, 0, "Washington");
 console.log(worldCities);
 
+// splice(1, 0, "Washington") was the way Joel did it.... 
 
 // 13. **Bonus** Write a program to join all elements of the result (worldCities) into a string. 
 // Example: worldCities = ["Berlin", "London", "Bangkok", "Phnom Penh"];
@@ -80,7 +89,13 @@ console.log(worldCities);
 
 console.log(worldCities.toString());
 
+
+// console.log(cities.join(", "));
+// cities.join("+";)
+
 // **Bonus**
+
+//
 
 // 1. Write a program to reverse the string: "Hello World". 
 
@@ -88,6 +103,12 @@ console.log(worldCities.toString());
 // const stringToReverse = "Hello World!"
 // const reversedString = stringToReverse.reverse();
 // console.log(reversedString);
+
+
+// Solution from Joel: 
+// const reversedString = stringToReverse.split("");
+// reversedString.reverse();
+// reversedString.join("");
 
 // **Extra Practice**
 
@@ -108,10 +129,19 @@ console.log(manyPeople);
 
 // 4. Add your pets' names.
 
-const petsNames = ["Fluffy", "Clover", "Flopsy"];
-manyPeople.concat(petsNames);
+manyPeople.push("Fluffy", "Clover", "Flopsy");
 console.log(manyPeople);
 
 // 5. Reverse the order of the array.
+
+manyPeople.reverse();
+console.log(manyPeople); 
+
 // 6. Access one of your parents' names.
+
+console.log(manyPeople[4]);
+
 // 7. Update the name of one of your parents. 
+
+manyPeople[4] = "Judith Ann Grainger";
+console.log(manyPeople);
